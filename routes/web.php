@@ -46,7 +46,7 @@ Route::get('/articoli/{id}', function ($id) {
     return view('dettaglio',['articolo'=> $articoli[$id]]);
 })->name('articoli.dettaglio');
 
-//ROTTA ARICOLO CONTATTI
+//ROTTA  CONTATTI
 
 Route::get('/contatti', function () {
     return view('contatti');
