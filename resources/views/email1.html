@@ -9,6 +9,74 @@
 </head>
 <body>
 
+    <style>
+
+        /* Stili di base che si applicano a tutti i dispositivi */
+body {
+    font-size: 16px;
+}
+
+/* Media query per dispositivi con larghezza massima di 600px (ad esempio, dispositivi mobili) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Media query per dispositivi con larghezza compresa tra 601px e 1200px (ad esempio, tablet) */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Media query per dispositivi con larghezza maggiore di 1200px (ad esempio, desktop) */
+@media only screen and (min-width: 1201px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+/* Stile di base del modulo */
+form {
+    width: 500px;
+    height: 750px;
+    border: solid;
+    background-color: aqua;
+    margin: 0 auto; /* Centra il modulo orizzontalmente */
+}
+
+/* Stile del titolo del modulo */
+h3 {
+    font-size: larger;
+}
+
+/* Stile delle etichette e degli input del modulo */
+label, input, textarea, button {
+    font-size: x-large;
+}
+
+/* Media query per dispositivi con larghezza massima di 600px (ad esempio, dispositivi mobili) */
+@media only screen and (max-width: 600px) {
+    form {
+        width: 90%; /* Adatta la larghezza al 90% dello schermo */
+        height: auto; /* L'altezza si adatterà dinamicamente */
+    }
+
+    label, input, textarea, button {
+        font-size: medium; /* Riduci la dimensione del testo */
+    }
+
+    button {
+        width: 100%; /* Rendi il pulsante largo al 100% del contenitore */
+        margin-left: 0; /* Rimuovi il margine sinistro */
+        margin-top: 10px; /* Aggiungi spazio tra il pulsante e gli altri elementi */
+    }
+}
+
+
+    </style>
+
 <center><h1> ESERCITAZIONE LARAVEL ALESSIO GIANNOCCARO</h1></center>
 
 <center><h2>HOME</h2></center>
@@ -41,7 +109,9 @@
 </div>
 </center>
 <center>
-    <form style="width: 500px; height: 650px; border: solid; background-color: aqua;" action="" method="post">
+
+    <form style="width: 500px; height: 750px; border: solid; background-color: aqua;" action="" method="post">
+       
         <h3>INVIACI UN EMAIL PER FARCI SAPERE LA TUA OPINIONE</h3>
         <br>
     
