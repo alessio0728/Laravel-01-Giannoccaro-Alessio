@@ -52,10 +52,19 @@ Route::get('/contatti', function () {
     return view('contatti');
 })->name("contatti");
 
-//ROTTA IMMAGINE
+//ROTTA RECENSIONI
 
 Route::get('/recensioni', function () {
     return view('recensioni');
 })->name("recensioni");
+
+
+//ROTTA EMAIL
+
+Route::get('/email', function () {
+    return view('email');
+})->name("email");
+
+
 
 
