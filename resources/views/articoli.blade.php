@@ -42,17 +42,19 @@
   <div class="col">
   
     <div class="card">
-      <img src="https://prod-printler-front-as.azurewebsites.net/media/photo/143901.jpg?mode=crop&width=727&height=1024&rnd=0.0.1" class="card-img-top" alt="...">
+      <img src="{{$articolo['immagine']}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{$articolo['titolo']}}</h5>
         <p class="card-text"> {{$articolo['nome']}}</p>
-        <p class="card-text"> {{$articolo['descrizione']}}</p>
-        <a href="https://it.wikipedia.org/wiki/Final_Fantasy_XVI">Descrizione</a>
+        <p class="card-text"> {{$articolo['genere']}}</p>
+        <a href="{{$articolo['descrizione']}}">Descrizione</a>
         <a href="{{route('articoli.dettaglio',['id'=>$chiave])}}">Dettaglio</a>
       </div>
     </div>
   </div>
 
+  @endforeach
+{{--
   <div class="col">
     <div class="card">
       <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Halo_Infinite.png" class="card-img-top" alt="...">
@@ -86,9 +88,10 @@
         <a href="https://it.wikipedia.org/wiki/Doom">Descrizione</a>
       </div>
     </div>
-    @endforeach
+    
   </div>
 </div>
+--}}
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

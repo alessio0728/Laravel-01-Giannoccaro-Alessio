@@ -24,10 +24,10 @@ Route::get('/', function () {
 
 Route::get('/articoli', function () {
 
-    $articoli = [['titolo'=> 'Final tantasy 16','descrizione'=>'Gioco di ruolo','nome'=>'PS5'],
-    ['titolo'=> 'Halo infinity','descrizione'=>'Gioco sparatutto','nome'=>'Xbox one X'],
-    ['titolo'=> 'Fifa 2024','descrizione'=>'Gioco di sport','nome'=>'Nintendo swich'],
-    ['titolo'=> 'Doom ','descrizione'=>'Gioco horror','nome'=>'Steam'],
+    $articoli = [['titolo'=> 'Final tantasy 16','genere'=>'Gioco di ruolo','nome'=>'PS5','immagine'=>"https://prod-printler-front-as.azurewebsites.net/media/photo/143901.jpg?mode=crop&width=727&height=1024&rnd=0.0.1","descrione"=>"https://it.wikipedia.org/wiki/Final_Fantasy_XVI"],
+    ['titolo'=> 'Halo infinity','genere'=>'Gioco sparatutto','nome'=>'Xbox one X','immagine'=>"https://upload.wikimedia.org/wikipedia/en/1/14/Halo_Infinite.png",'descrione'=>"https://it.wikipedia.org/wiki/Halo_Infinite"],
+    ['titolo'=> 'Fifa 2024','genere'=>'Gioco di sport','nome'=>'Nintendo swich','immagine'=>"https://m.media-amazon.com/images/I/71wol6NzJYL._AC_UF1000,1000_QL80_.jpg",'descrione'=>"https://it.wikipedia.org/wiki/Coppa_Intercontinentale_FIFA_2024"],
+    ['titolo'=> 'Doom ','genere'=>'Gioco horror','nome'=>'Steam','immagine'=>"https://images.g2a.com/360x600/1x1x1/doom-steam-key-global-i10000002155012/5912d667ae653a98cb5745ac",'descrione'=>"https://it.wikipedia.org/wiki/Doom"],
 ];
 
     
@@ -36,14 +36,14 @@ return view('articoli',['articoli'=>$articoli,'titolo' => 'titolo effettivo']);
 
 //ROTTA ARTICOLO SINGOLO // ROTTA PARAMETRICA
 
-Route::get('/articolo/{id}', function ($id) {
+Route::get('/articoli/{id}', function ($id) {
 
-    $articoli = [['titolo'=> 'Final tantasy 16','descrizione'=>'Gioco di ruolo','nome'=>'PS5'],
-    ['titolo'=> 'Halo infinity','descrizione'=>'Gioco sparatutto','nome'=>'Xbox one X'],
-    ['titolo'=> 'Fifa 2024','descrizione'=>'Gioco di sport','nome'=>'Nintendo swich'],
-    ['titolo'=> 'Doom ','descrizione'=>'Gioco horror','nome'=>'Steam'],
+    $articoli = [['titolo'=> 'Final tantasy 16','genere'=>'Gioco di ruolo','nome'=>'PS5','immagine'=>"https://prod-printler-front-as.azurewebsites.net/media/photo/143901.jpg?mode=crop&width=727&height=1024&rnd=0.0.1",'descrione'=>"https://it.wikipedia.org/wiki/Final_Fantasy_XVI"],
+    ['titolo'=> 'Halo infinity','genere'=>'Gioco sparatutto','nome'=>'Xbox one X','immagine'=>"https://upload.wikimedia.org/wikipedia/en/1/14/Halo_Infinite.png",'descrione'=>"https://it.wikipedia.org/wiki/Halo_Infinite"],
+    ['titolo'=> 'Fifa 2024','genere'=>'Gioco di sport','nome'=>'Nintendo swich','immagine'=>"https://m.media-amazon.com/images/I/71wol6NzJYL._AC_UF1000,1000_QL80_.jpg",'descrione'=>"https://it.wikipedia.org/wiki/Coppa_Intercontinentale_FIFA_2024"],
+    ['titolo'=> 'Doom ','genere'=>'Gioco horror','nome'=>'Steam','immagine'=>"https://images.g2a.com/360x600/1x1x1/doom-steam-key-global-i10000002155012/5912d667ae653a98cb5745ac",'descrione'=>"https://it.wikipedia.org/wiki/Doom"],
 ];
-    return view('dettaglio',['articolo'=> $articoli[id]]);
+    return view('dettaglio',['articolo'=> $articoli[$id]]);
 })->name('articoli.dettaglio');
 
 //ROTTA ARICOLO CONTATTI
