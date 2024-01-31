@@ -66,7 +66,7 @@
         <div>
             <p style="padding-top: 10px; font-size: larger;">EMAIL</p>
             <label for="email" style="cursor: text; font-size: x-large;"></label>
-            <input type="text" name="email" id="email" placeholder="Inserisci la tua email">
+            <input type="email" name="email" id="email" placeholder="Inserisci la tua email">
         </div>
     
         <!-- COMMENTO -->
