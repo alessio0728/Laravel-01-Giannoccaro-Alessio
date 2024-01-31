@@ -43,7 +43,7 @@
                 <h5 class="card-title">{{$articolo['titolo']}}</h5>
                 <p class="card-text">{{$articolo['nome']}}</p>
                 <p class="card-text">{{$articolo['genere']}}</p>
-                <a href="{{$articolo['descrizione']}}">Descrizione</a>
+                <a href="{{$articolo['descrizione']?? "#"}}">Descrizione</a>
             </div>
         </div>
     </div>
