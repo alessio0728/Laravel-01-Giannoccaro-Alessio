@@ -27,7 +27,7 @@
         <a class="nav-link active" aria-current="page" href="{{route('articoli')}}">ARTICOLI</a>
         <a class="nav-link" href="{{route('contatti')}}">CONTATTI</a>
         <a class="nav-link" href="{{route('recensioni')}}">RECENSIONI</a>
-        <a class="nav-link" href="">EMAIL</a>
+        <a class="nav-link" href="{{route('email')}}">EMAIL</a>
         
         
         

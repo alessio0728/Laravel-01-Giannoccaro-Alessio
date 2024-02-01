@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Mailcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,11 @@ Route::get('/recensioni', function () {
 Route::get('/email', function () {
     return view('email');
 })->name("email");
+
+//ROTTA POST EMAIL
+
+Route::post('/email/invio',[Mailcontroller::class,'invioemail'])->name('invio');
+
 
 
 

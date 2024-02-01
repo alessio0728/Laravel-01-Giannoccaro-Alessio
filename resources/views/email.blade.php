@@ -36,8 +36,13 @@
 
 <center>
 
-    <form style="width: 500px; height: 750px; border: solid; background-color: aqua;" action="" method="post">
-       
+    <form style="width: 500px; height: 750px; border: solid; background-color: aqua;" 
+    
+           action="{{route('invio')}}" method="post">
+           
+           {{--Protezione contro gli haker evita l'errore 419 --}}
+           @csrf
+
         <h3>INVIACI UN EMAIL PER FARCI SAPERE LA TUA OPINIONE</h3>
         <br>
     
@@ -78,7 +83,28 @@
     
         <!-- INVIA -->
         <button type="submit" style="border: solid; background-color:#DCFFB7; width: 100px; height: 50px; font-size: larger; margin-top: 30px; margin-left: 250px;">INVIA</button>
-    </form>
+    
+        <!--COMMANDO VISIVO CHE L'EMAIL E STATA INVIATA CORETTAMENTE-->
+
+        @if (session()->has('inviato'))
+
+        <h3 style="background-color: green; color: blue; margin-top: 20px;">{{'session'('inviato')}}</h3>
+            
+        @endif
+
+        <!--COMMANDO VISIVO CHE L'EMAIL E STATA INVIATA IN MODO SBAGLIATO-->
+
+        @if (session()->has('fallimento'))
+
+        <h3 style="background-color: red; color: blue; margin-top: 20px;">{{'session'('fallimento')}}</h3>
+            
+        @endif
+    
+    
+    
+      </form>
+
+   
     
 
 </center>
