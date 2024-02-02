@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 
 
-use Illuminate\Http\Request;
+use App\Mail\email;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Mailcontroller;
 
@@ -20,10 +21,12 @@ class Mailcontroller extends Controller
 
         if($dati['email']==''){
 
-            Mail::to('indirizzo@example.com')->send(new email($dati['nome'],$dati['cognome'],$dati['indirizzo'],$dati['email'],$dati['commento'],));
+            
 
             return  redirect()->back()->with('fallimento','IL MESSAGGIO NON È STATO INVIATO');
         }
+
+        Mail::to('indirizzo@example.com')->send(new email($dati['nome'],$dati['cognome'],$dati['indirizzo'],$dati['commento'],$dati['email']));
 
         //return redirect()->route('home'); al posto di home posso mettere la pagina che deve visualizzare
 

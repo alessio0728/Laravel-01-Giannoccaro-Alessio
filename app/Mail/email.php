@@ -17,7 +17,7 @@ class email extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public $nome,public $cognome, public $indirizzo,public $commento)
+    public function __construct(public $nome,public $cognome, public $indirizzo,public $commento, public $email)
     {
         //
     }
@@ -40,7 +40,7 @@ class email extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'contenutoemail',
+            view: 'contenutoemeil',
         );
     }
 
