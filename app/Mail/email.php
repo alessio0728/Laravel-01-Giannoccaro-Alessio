@@ -40,7 +40,7 @@ class email extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'contenutoemeil',
+            view: 'contenutoemail',
         );
     }
 
